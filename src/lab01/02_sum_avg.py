@@ -12,6 +12,6 @@ b = parse_number(b_str)
 total = a + b
 avg = total / 2
 
-print(f"sum={total:.2f}; avg={avg:.2f}")
+print(f"sum={total}; avg={avg}")
 
 
