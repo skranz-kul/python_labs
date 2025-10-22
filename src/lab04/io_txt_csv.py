@@ -5,12 +5,11 @@ from typing import Iterable, Sequence
 def read_text(path: str | Path, encoding: str = "utf-8") -> str:
     """
     Функция для чтения текста из файла в одну строку
-    для выбора другой кодировки нужно ввести ее в терминал
+    для выбора другой кодировки нужно передать значение аргумента в функцию
     пример:
     read_text("Ваш_путь", "cp1251") - в данном случае кодировка будет cp1251 вместо utf-8
     """
-    encoding, p = input("Введите кодирову или '-' для использования стандартной utf-8:\n"), Path(path)
-    if encoding == '-': encoding = 'utf-8'
+    p = Path(path)
     return ''.join(p.read_text(encoding=encoding).split())
 
 # print(read_text("data/samples/input.txt"))
