@@ -3,7 +3,7 @@ def normalize(input_text: str, *, apply_casefold: bool = True, yo_to_e: bool = T
     if apply_casefold: 
         input_text = input_text.casefold()
     if yo_to_e:
-        input_text = input_text.replace("ё","е").replace("Ё","Е")
+        input_text = input_text.replace("ё","е")
     input_text = " ".join(input_text.split())
     return input_text
 """
