@@ -12,7 +12,7 @@ def read_text(path: str | Path, encoding: str = "utf-8") -> str:
     p = Path(path)
     return ''.join(p.read_text(encoding=encoding).split())
 
-# print(read_text("data/samples/input.txt"))
+print(read_text("data/samples/input.txt"))
 
 def write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...] | None = None) -> None:
     """
@@ -27,5 +27,5 @@ def write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...
         w = csv.writer(f)
         if header is not None: w.writerow(header)
         for r in rows: w.writerow(r)
-# write_csv([("word","count"),("test",3)], "src/lab04/output.csv", 'ddg') 
+write_csv([("word","count"),("test",3)], "src/lab04/output.csv", 'ddg') 
 # write_csv(rows=[], path="src/lab04/output.csv", header=None)
