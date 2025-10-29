@@ -1,6 +1,6 @@
 import json
 import csv
-from queue import Empty
+
 
 def json_to_csv(json_path: str, csv_path: str) -> None:
     """

@@ -22,8 +22,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
             for cell in column:
                 mx = max(mx, len(cell.value))
             new_width = max(mx + 2, 8)
-            print(ws.column_dimensions)
             ws.column_dimensions[column_letter].width = new_width
     
     wb.save(xlsx_path)
-csv_to_xlsx('src/lab05/json_to_csv_converted_file.csv', 'src/lab05/csv_to_xlsx.xlsx')
+csv_to_xlsx('data/samples/test.csv', 'src/lab05/csv_to_xlsx.xlsx')
