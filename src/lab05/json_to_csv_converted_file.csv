@@ -1,6 +1,4 @@
-name,age,city
-Alice,22,SPB
-Bob,25,Moscow
-Carlos,30,Kazan
-Dana,21,SPB
-Andrey,27,Novosibirsk
+lesson,time,place
+math,10:50,L
+MRG,09:00,A
+english language,14:30,G

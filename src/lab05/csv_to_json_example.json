@@ -1,27 +1,17 @@
 [
   {
-    "city": "SPB",
-    "country": "Russia",
-    "population": "5384342"
+    "lesson": "math",
+    "time": "10:50",
+    "place": "L"
   },
   {
-    "city": "Moscow",
-    "country": "Russia",
-    "population": "13010112"
+    "lesson": "MRG",
+    "time": "09:00",
+    "place": "A"
   },
   {
-    "city": "Kazan",
-    "country": "Russia",
-    "population": "1306953"
-  },
-  {
-    "city": "Novosibirsk",
-    "country": "Russia",
-    "population": "1620162"
-  },
-  {
-    "city": "Yekaterinburg",
-    "country": "Russia",
-    "population": "1493749"
+    "lesson": "english language",
+    "time": "14:30",
+    "place": "G"
   }
 ]
