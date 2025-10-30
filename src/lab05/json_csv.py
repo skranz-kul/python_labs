@@ -32,7 +32,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     if csv_path[-3::] != 'csv' or json_path[-4::] != 'json':
         raise TypeError
     lt_rows = []
-    with open(csv_path, 'r', encoding='utf-8', newline='') as cf:
+    with open(csv_path, 'r', encoding='utf-8') as cf:
         reader = csv.DictReader(cf)
         for row in reader:
             lt_rows.append(row)
