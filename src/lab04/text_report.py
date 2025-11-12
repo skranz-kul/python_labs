@@ -21,8 +21,6 @@ def read_text(path: str | Path, encoding: str = "utf-8") -> str:
         print('Такого файла не существует.')
         sys.exit(-1)
 
-new_str = read_text("data/samples/input.txt")
-
 
 def frequencies_from_text(text: str) -> dict[str, int]:
     tokens = tokenize(normalize(text))
@@ -44,7 +42,8 @@ def write_report_to_csv(word_counts: list[tuple[str, int]], path: str | Path = "
         for word, count in word_counts:
             w.writerow((word, count))
 
-sorted_list = sorted_word_counts(frequencies_from_text(new_str))
-
-write_report_to_csv(sorted_list, "src/lab04/report.csv")
-print(f"Отчет сохранен в файл: report.csv")
+if __name__ == "__main__":
+    new_str = read_text("data/samples/input.txt")
+    sorted_list = sorted_word_counts(frequencies_from_text(new_str))
+    write_report_to_csv(sorted_list, "src/lab04/report.csv")
+    print(f"Отчет сохранен в файл: report.csv")

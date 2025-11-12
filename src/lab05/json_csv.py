@@ -20,9 +20,6 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
         writer.writerows(data)
 
 
-json_to_csv('data/samples/test.json', 'src/lab05/json_to_csv_converted_file.csv')
-
-
 def csv_to_json(csv_path: str, json_path: str) -> None:
     """
     Преобразует CSV в JSON (список словарей).
@@ -41,5 +38,6 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     with open(json_path, 'w', encoding='utf-8') as jf:
         json.dump(lt_rows, jf, ensure_ascii=False, indent=2)
 
-
-csv_to_json('data/samples/test.csv', 'src/lab05/csv_to_json_example.json')
+if __name__ == "__main__":
+    json_to_csv('data/samples/test.json', 'src/lab05/json_to_csv_converted_file.csv')
+    csv_to_json('data/samples/test.csv', 'src/lab05/csv_to_json_example.json')

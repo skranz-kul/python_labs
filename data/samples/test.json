@@ -2,16 +2,16 @@
     {
       "lesson": "math",
       "time": "10:50",
-      "place": "L"
+      "place": null
     },
     {
       "lesson": "MRG",
-      "time": "09:00",
-      "place": "A"
+      "time": null,
+      "place": false
     },
     {
       "lesson": "english language",
       "time": "14:30",
-      "place": "G"
+      "place": true
     }
   ]
