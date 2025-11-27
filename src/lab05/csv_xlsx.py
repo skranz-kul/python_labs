@@ -1,6 +1,7 @@
 from openpyxl import Workbook
 import csv
 
+
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     """
     Конвертирует CSV в XLSX.
@@ -12,10 +13,10 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     wb = Workbook()
     ws = wb.active
     ws.title = "Sheet1"
-    
+
     with open(csv_path, encoding="utf-8") as f:
         for row in csv.reader(f):
-                ws.append(row)
+            ws.append(row)
         for column in ws.columns:
             mx = 0
             column_letter = column[0].column_letter
@@ -23,8 +24,9 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
                 mx = max(mx, len(cell.value))
             new_width = max(mx + 2, 8)
             ws.column_dimensions[column_letter].width = new_width
-    
+
     wb.save(xlsx_path)
 
+
 if __name__ == "__main__":
-    csv_to_xlsx('data/samples/test.csv', 'src/lab05/csv_to_xlsx.xlsx')
+    csv_to_xlsx("data/samples/test.csv", "src/lab05/csv_to_xlsx.xlsx")

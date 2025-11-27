@@ -13,5 +13,3 @@ total = a + b
 avg = total / 2
 
 print(f"sum={total}; avg={avg}")
-
-

@@ -1,9 +1,9 @@
 def format_record(rec: tuple[str, str, float]) -> str:
     if not isinstance(rec, tuple) or len(rec) != 3:
         return "TypeError"
-    
+
     fio, group, gpa = rec
-    
+
     if not isinstance(fio, str):
         return "TypeError"
     if not isinstance(group, str):
@@ -21,8 +21,8 @@ def format_record(rec: tuple[str, str, float]) -> str:
     initials = []
     for name_part in fio_parts[1:]:
         if name_part:
-            initials.append(name_part[0].upper() + '.')
-    formatted_fio = surname + ' ' + ''.join(initials)
+            initials.append(name_part[0].upper() + ".")
+    formatted_fio = surname + " " + "".join(initials)
     result = f"{formatted_fio}, гр. {group.strip()}, GPA {gpa:.2f}"
     return result
 
@@ -35,4 +35,3 @@ print(format_record(("", "BIVT-25", 4.6)))
 print(format_record(("Иванов", "BIVT-25", 4.6)))
 print(format_record(("Иванов Иван", "", 4.6)))
 print(format_record(("Иванов Иван", "BIVT-25", "4.6")))
-
