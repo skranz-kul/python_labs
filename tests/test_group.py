@@ -223,3 +223,4 @@ def test_read_all_validates_missing_field(tmp_path: Path):
     with pytest.raises(ValueError, match="отсутствует поле"):
         group.list()
 
+
